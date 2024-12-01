@@ -560,6 +560,9 @@ footer a:hover {
   section.instruktur .row .card {
     width: 30rem;
   }
+  .section-details .detail-content .details-images {
+    width: 100%;
+  }
   .detail-content .details-deskripsi .details-sarana {
     flex-direction: column;
   }
