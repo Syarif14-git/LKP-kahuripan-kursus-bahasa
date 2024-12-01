@@ -213,11 +213,11 @@ section.service .service-image {
 
 .service .service-deskripsi h3 {
   color: var(--clr);
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .service .service-deskripsi p {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 200;
   margin-block: 1rem;
 }
@@ -508,6 +508,22 @@ footer a:hover {
   .navbar .navbar-nav.active {
     right: 0;
     color: #010101;
+  }
+  section.service .row {
+    flex-direction: column;
+  }
+  section.service .row .service-image {
+    order: 1;
+    text-align: center;
+  }
+  section.service .row .service-deskripsi {
+    order: 2;
+  }
+  section.service .row .service-deskripsi h3 {
+    font-size: 2.3rem;
+  }
+  section.service .row .service-deskripsi p {
+    font-size: 1.6rem;
   }
   .section-details .detail-content {
     flex-direction: column;
