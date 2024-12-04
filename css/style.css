@@ -318,11 +318,11 @@ section.details .section-details .detail-content {
 }
 
 .section-details .details-images {
-  flex: 1;
-  width: 50%;
+  width: 25%;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 2rem;
 }
 
 .section-details .details-images img {
@@ -511,12 +511,16 @@ footer a:hover {
   }
   section.service .row {
     flex-direction: column;
+    align-items: center;
   }
   section.service .row .service-image {
     order: 1;
     text-align: center;
+    width: 70%;
   }
-  section.service .row .service-deskripsi {
+  section.service .row .service-deskripsi,
+  .section-details .detail-content .details-deskripsi {
+    width: 100%;
     order: 2;
   }
   section.service .row .service-deskripsi h3 {
@@ -531,12 +535,8 @@ footer a:hover {
     align-items: center;
   }
   .section-details .detail-content .details-images {
-    width: 70%;
-    order: 1;
-  }
-  .section-details .detail-content .details-deskripsi {
-    order: 2;
-    width: 100%;
+    width: 50%;
+    padding: 2rem;
   }
   .detail-content .details-deskripsi .details-sarana {
     justify-content: flex-start;
@@ -550,7 +550,10 @@ footer a:hover {
   }
   .navbar .search-form {
     width: 90%;
-    right: 2rem;
+  }
+  section.service .row .service-image,
+  .section-details .detail-content .details-images {
+    width: 90%;
   }
   section.instruktur .row {
     flex-direction: column;
@@ -559,9 +562,6 @@ footer a:hover {
   }
   section.instruktur .row .card {
     width: 30rem;
-  }
-  .section-details .detail-content .details-images {
-    width: 100%;
   }
   .detail-content .details-deskripsi .details-sarana {
     flex-direction: column;

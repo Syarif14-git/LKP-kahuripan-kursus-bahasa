@@ -5,7 +5,8 @@ const searchForm = document.querySelector(".search-form");
 const searchBox = document.getElementById("search-box");
 
 // ketika icon hamburger di click
-document.getElementById("hamburger-menu").onclick = () => {
+document.getElementById("hamburger-menu").onclick = (e) => {
+  e.preventDefault();
   navbarNav.classList.toggle("active");
 };
 
