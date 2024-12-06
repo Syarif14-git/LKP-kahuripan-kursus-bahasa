@@ -28,7 +28,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.4rem 7%;
+  padding: 1rem 7%;
   background-color: rgba(252, 248, 244);
   border-bottom: 1px solid rgb(201, 161, 109);
   position: fixed;
@@ -43,6 +43,10 @@ body {
   font-weight: 700;
   font-style: italic;
   color: var(--clr);
+}
+
+.navbar .navbar-logo img {
+  width: 5rem;
 }
 
 .navbar .navbar-logo span {
@@ -123,7 +127,7 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url(../img/hero.png);
+  background-image: url(../img/hero2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -176,6 +180,7 @@ body {
 /* hero section end */
 
 /* service section start */
+section.tentang h2,
 section.service h2,
 section.instruktur h2,
 section.details h2 {
@@ -184,10 +189,59 @@ section.details h2 {
   padding: 20px 0 0;
 }
 
+section.tentang h2 span,
 section.service h2 span,
 section.instruktur h2 span,
 section.details h2 span {
   color: var(--primary);
+}
+
+section.tentang {
+  margin: 2rem 0;
+}
+
+section.tentang p {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+
+section.tentang .row {
+  width: 100%;
+  display: flex;
+}
+
+section.tentang .row .image {
+  display: flex;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+section.tentang .row .image img {
+  width: 30rem;
+  height: auto;
+}
+
+section.tentang .row .deskripsi {
+  padding: 2rem;
+}
+
+section.tentang .row .deskripsi h3 {
+  font-size: 1.7rem;
+  border-bottom: 2px solid var(--clr);
+  width: fit-content;
+  margin-bottom: 1rem;
+}
+
+section.tentang .row .deskripsi p {
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+section.tentang .row .deskripsi p span {
+  font-weight: bold;
 }
 
 section.service .row {
@@ -464,6 +518,34 @@ footer a {
 footer a:hover {
   color: var(--bg);
 }
+
+footer .supporter h2 {
+  color: var(--clr);
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: left;
+  width: fit-content;
+  border-bottom: 1px solid var(--clr);
+}
+
+footer .supporter .items {
+  display: flex;
+  margin: 1rem 0;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+footer .supporter .item {
+  width: 20rem;
+  padding: 0.5rem;
+  box-shadow: 0 0 10px rgba(128, 128, 128, 0.363);
+  border-radius: 10px;
+}
+
+footer .supporter .item img {
+  width: 100%;
+}
+
 /* footer end */
 
 /* media */
@@ -479,9 +561,11 @@ footer a:hover {
   html {
     font-size: 62.5%;
   }
+
   .navbar a#hamburger-menu {
     display: inline-block;
   }
+
   .navbar .navbar-nav {
     position: absolute;
     top: 100%;
@@ -491,6 +575,7 @@ footer a:hover {
     height: 100vh;
     transition: 0.5s;
   }
+
   .navbar .navbar-nav a {
     color: var(--clr);
     display: block;
@@ -499,45 +584,60 @@ footer a:hover {
     padding: 0.5rem;
     width: fit-content;
   }
+
   .navbar .navbar-nav a::after {
     transform-origin: 0 0;
   }
+
   .navbar .navbar-nav a:hover::after {
     transform: scale(1);
   }
+
   .navbar .navbar-nav.active {
     right: 0;
     color: #010101;
   }
+
+  section.tentang .row {
+    flex-direction: column;
+  }
+
   section.service .row {
     flex-direction: column;
     align-items: center;
   }
+
   section.service .row .service-image {
     order: 1;
     text-align: center;
     width: 70%;
   }
+
   section.service .row .service-deskripsi,
   .section-details .detail-content .details-deskripsi {
     width: 100%;
     order: 2;
   }
+
   section.service .row .service-deskripsi h3 {
     font-size: 2.3rem;
   }
+
   section.service .row .service-deskripsi p {
     font-size: 1.6rem;
   }
+
   .section-details .detail-content {
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
+
   .section-details .detail-content .details-images {
     width: 50%;
     padding: 2rem;
   }
+
   .detail-content .details-deskripsi .details-sarana {
     justify-content: flex-start;
   }
@@ -548,27 +648,34 @@ footer a:hover {
   html {
     font-size: 55%;
   }
+
   .navbar .search-form {
     width: 90%;
   }
+
   section.service .row .service-image,
   .section-details .detail-content .details-images {
     width: 90%;
   }
+
   section.instruktur .row {
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
+
   section.instruktur .row .card {
     width: 30rem;
   }
+
   .detail-content .details-deskripsi .details-sarana {
     flex-direction: column;
   }
+
   .section-details .details-harga {
     flex-direction: column;
   }
+
   footer .lokasi {
     flex-direction: column;
     align-items: center;
