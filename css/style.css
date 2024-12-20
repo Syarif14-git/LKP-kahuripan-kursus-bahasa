@@ -1,7 +1,11 @@
 :root {
-  --primary: rgb(58, 58, 58);
+  --primary: rgb(224, 186, 79);
   --bg: rgb(255, 255, 255);
-  --clr: rgb(165, 87, 42);
+  --color1: rgb(0, 47, 78);
+  --color2: #fada7a;
+  --color3: #f5f0cd;
+  --color4: #81bfda;
+  --color5: #b1f0f7;
 }
 
 html {
@@ -18,10 +22,15 @@ html {
   scroll-padding-top: 80px;
 }
 
+p {
+  text-align: justify;
+}
+
 body {
   font-family: "Poppins", sans-serif;
-  background-color: rgb(252, 248, 244);
-  color: var(--clr);
+  background-color: var(--bg);
+  color: var(--color1);
+  overflow-x: hidden;
 }
 
 .navbar {
@@ -29,9 +38,9 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 7%;
-  background-color: rgba(252, 248, 244);
-  border-bottom: 1px solid rgb(201, 161, 109);
-  position: fixed;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid rgb(153, 229, 248);
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
@@ -42,7 +51,7 @@ body {
   font-size: 2rem;
   font-weight: 700;
   font-style: italic;
-  color: var(--clr);
+  color: var(--color1);
 }
 
 .navbar .navbar-logo img {
@@ -54,7 +63,7 @@ body {
 }
 
 .navbar .navbar-nav a {
-  color: var(--clr);
+  color: var(--color1);
   display: inline-block;
   font-size: 1.4rem;
   margin: 0 1rem;
@@ -81,7 +90,7 @@ body {
 .navbar .navbar-extra a {
   display: inline-block;
   margin: 0 0.5rem;
-  color: var(--clr);
+  color: var(--color1);
 }
 
 .navbar-extra a#hamburger-menu {
@@ -127,10 +136,11 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url(../img/hero2.jpg);
+  /* background-image: url(../img/hero2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center; */
+  background-color: var(--color4);
   position: relative;
   color: var(--bg);
 }
@@ -141,7 +151,7 @@ body {
   height: 30%;
   position: absolute;
   bottom: 0;
-  background: linear-gradient(0deg, rgb(202, 197, 193) 3%, rgba(255, 255, 255, 0) 30%);
+  background: linear-gradient(0deg, rgb(255, 255, 255) 3%, rgba(255, 255, 255, 0) 30%);
 }
 
 .hero .content {
@@ -189,59 +199,10 @@ section.details h2 {
   padding: 20px 0 0;
 }
 
-section.tentang h2 span,
 section.service h2 span,
 section.instruktur h2 span,
 section.details h2 span {
   color: var(--primary);
-}
-
-section.tentang {
-  margin: 2rem 0;
-}
-
-section.tentang p {
-  text-align: center;
-  font-size: 1.3rem;
-  font-weight: 300;
-}
-
-section.tentang .row {
-  width: 100%;
-  display: flex;
-}
-
-section.tentang .row .image {
-  display: flex;
-  padding: 2rem;
-  justify-content: center;
-  align-items: center;
-}
-
-section.tentang .row .image img {
-  width: 30rem;
-  height: auto;
-}
-
-section.tentang .row .deskripsi {
-  padding: 2rem;
-}
-
-section.tentang .row .deskripsi h3 {
-  font-size: 1.7rem;
-  border-bottom: 2px solid var(--clr);
-  width: fit-content;
-  margin-bottom: 1rem;
-}
-
-section.tentang .row .deskripsi p {
-  text-align: left;
-  font-size: 1.2rem;
-  font-weight: 300;
-}
-
-section.tentang .row .deskripsi p span {
-  font-weight: bold;
 }
 
 section.service .row {
@@ -266,19 +227,19 @@ section.service .service-image {
 }
 
 .service .service-deskripsi h3 {
-  color: var(--clr);
+  color: var(--color1);
   font-size: 2rem;
 }
 
 .service .service-deskripsi p {
-  font-size: 1.3rem;
-  font-weight: 200;
+  font-size: 1.5rem;
+  font-weight: 400;
   margin-block: 1rem;
 }
 
 .service .service-deskripsi .btn {
   display: block;
-  color: var(--clr);
+  color: var(--color1);
   font-size: 1.5rem;
   transition: 0.3s;
   width: fit-content;
@@ -320,10 +281,14 @@ section.instruktur .row {
   width: 100%;
   padding: 10px;
   box-shadow: 0 0 3px gray;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .instruktur .row .card-image img {
   width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .instruktur .row .card-deskripsi {
@@ -332,11 +297,13 @@ section.instruktur .row {
 
 .instruktur .row .card-deskripsi h3 {
   font-size: 1.5rem;
+  text-align: center;
 }
 
 .instruktur .row .card-deskripsi p {
   font-size: 1.2rem;
   font-weight: 400;
+  text-align: center;
 }
 /* insturktur end */
 
@@ -357,12 +324,12 @@ section.details .section-details {
 
 section.details .detail-inggris {
   width: 100%;
-  background-color: #ffffff;
+  background-color: var(--color5);
 }
 
 section.details .detail-jepang {
   width: 100%;
-  background-color: #feffed;
+  background-color: var(--color2);
 }
 
 section.details .section-details .detail-content {
@@ -434,31 +401,31 @@ section.details .section-details .detail-content {
 }
 
 .details-deskripsi .detail-jadwal {
-  background-color: rgba(255, 213, 98, 0.192);
+  background-color: rgb(248, 248, 248);
 }
 
 .details-deskripsi .detail-fasilitas {
-  background-color: rgba(208, 255, 98, 0.192);
+  background-color: rgb(247, 255, 137);
 }
 
 .details-deskripsi .detail-benefit {
-  background-color: rgba(98, 255, 190, 0.192);
+  background-color: rgb(168, 255, 110);
 }
 
 .section-details .details-harga .beginner {
-  background-color: rgba(103, 255, 98, 0.192);
+  background-color: rgb(175, 255, 231);
 }
 
 .section-details .details-harga .elementary {
-  background-color: rgba(98, 114, 255, 0.192);
+  background-color: rgb(98, 171, 255);
 }
 
 .section-details .details-harga .intermediate {
-  background-color: rgba(224, 98, 255, 0.192);
+  background-color: rgb(138, 237, 255);
 }
 
 .section-details .details-harga .basic-working {
-  background-color: rgba(255, 98, 124, 0.192);
+  background-color: rgb(226, 154, 255);
 }
 
 .section-details .details-harga h5 {
@@ -466,7 +433,7 @@ section.details .section-details .detail-content {
   width: fit-content;
   padding: 5px;
   border-radius: 5px;
-  background-color: var(--clr);
+  background-color: var(--color1);
   color: #ffffff;
 }
 
@@ -477,7 +444,8 @@ footer {
   width: 100%;
   padding: 2rem;
   text-align: center;
-  background-color: rgba(250, 214, 184, 0.616);
+  background-color: var(--color4);
+  color: white;
 }
 
 footer .socials {
@@ -497,7 +465,7 @@ footer .lokasi {
 footer .lokasi .peta {
   width: 20rem;
   height: 20rem;
-  border: 2px solid var(--clr);
+  border: 2px solid var(--color1);
 }
 
 footer .lokasi .peta iframe {
@@ -520,12 +488,12 @@ footer a:hover {
 }
 
 footer .supporter h2 {
-  color: var(--clr);
+  color: var(--color1);
   font-weight: bold;
   font-size: 1.5rem;
   text-align: left;
   width: fit-content;
-  border-bottom: 1px solid var(--clr);
+  border-bottom: 1px solid var(--color1);
 }
 
 footer .supporter .items {
@@ -536,13 +504,20 @@ footer .supporter .items {
 }
 
 footer .supporter .item {
-  width: 20rem;
+  width: fit-content;
   padding: 0.5rem;
-  box-shadow: 0 0 10px rgba(128, 128, 128, 0.363);
+  background-color: white;
+  box-shadow: 0 5px 9px 2px rgba(218, 218, 218, 0.726);
   border-radius: 10px;
 }
 
 footer .supporter .item img {
+  width: 100%;
+  width: 20rem;
+}
+
+footer .copyright p {
+  text-align: center;
   width: 100%;
 }
 
@@ -577,7 +552,7 @@ footer .supporter .item img {
   }
 
   .navbar .navbar-nav a {
-    color: var(--clr);
+    color: var(--color1);
     display: block;
     font-size: 2rem;
     margin: 1.5rem;
