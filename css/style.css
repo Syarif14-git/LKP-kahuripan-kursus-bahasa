@@ -1,7 +1,7 @@
 :root {
   --primary: rgb(224, 186, 79);
   --bg: rgb(255, 255, 255);
-  --color1: rgb(0, 47, 78);
+  --color1: rgb(4, 89, 146);
   --color2: #fada7a;
   --color3: #f5f0cd;
   --color4: #81bfda;
@@ -42,11 +42,13 @@ p {
   padding: 1rem 7%;
   background-color: rgb(255, 255, 255);
   border-bottom: 1px solid rgb(153, 229, 248);
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 999;
+  /* position: sticky; */
+  /* top: 0; */
 }
 
 .navbar .navbar-logo {
@@ -70,6 +72,10 @@ p {
   font-size: 1.4rem;
   margin: 0 1rem;
   transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a.active::after {
+  transform: scaleX(1);
 }
 
 .navbar .navbar-nav a:hover {
