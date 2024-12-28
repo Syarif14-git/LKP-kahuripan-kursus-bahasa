@@ -38,18 +38,20 @@
   align-items: center;
 }
 
-.content .content-deskripsi h3 {
+.content .content-deskripsi h3,
+section.visi-misi > h3 {
   width: fit-content;
   font-size: 3rem;
   border-bottom: 2px solid var(--color1);
   text-shadow: 0 1px 3px var(--color2);
 }
 
-.content .content-deskripsi h4 {
+.content .content-deskripsi h4,
+section.visi-misi > h4 {
   font-weight: 400;
   color: var(--color4);
   margin-bottom: 1rem;
-  /* font-size: 1.5rem; */
+  font-size: 1.5rem;
 }
 
 .content .content-deskripsi p {
@@ -68,19 +70,6 @@
 
 .container section.visi-misi {
   padding: 4rem;
-}
-
-section.visi-misi > h3 {
-  font-size: 3rem;
-  text-transform: uppercase;
-  text-shadow: 0 1px 3px var(--color2);
-  border-bottom: 2px solid var(--color1);
-  width: fit-content;
-}
-
-section.visi-misi > h4 {
-  color: var(--color4);
-  margin-bottom: 2rem;
 }
 
 section.visi-misi ul.visi h2,

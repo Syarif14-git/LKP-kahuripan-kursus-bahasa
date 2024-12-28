@@ -10,6 +10,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow: auto;
 }
 
 * {
@@ -22,15 +23,16 @@ html {
   scroll-padding-top: 80px;
 }
 
-p {
-  text-align: justify;
-}
-
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--bg);
   color: var(--color1);
   overflow-x: hidden;
+  width: 100%;
+}
+
+p {
+  text-align: justify;
 }
 
 .navbar {
@@ -195,7 +197,7 @@ section.service h2,
 section.instruktur h2,
 section.details h2 {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   padding: 20px 0 0;
 }
 
@@ -387,6 +389,7 @@ section.details .section-details .detail-content {
 
 .details-deskripsi ul {
   padding-left: 30px;
+  font-size: 1.2rem;
 }
 
 .details-deskripsi .details-sarana .detail-jadwal,
